@@ -10,10 +10,10 @@ import net.lsferreira.school.trabalholaboratorial.identificadores.pessoas.Pessoa
 import java.util.LinkedList;
 
 public class Professor extends PessoaComAulas implements Funcionario {
-    public Professor(String nome, long numero)
-    {
-        this(nome, numero, null);
-    }
+	public Professor(String nome, long numero)
+	{
+		this(nome, numero, null);
+	}
 
 	public Professor(String nome, long numero, GabineteProfessor gabinete){
 		super(nome, numero);
@@ -57,38 +57,38 @@ public class Professor extends PessoaComAulas implements Funcionario {
 	}
 
 	public void desassociarGabinete()
-    {
-        this.gabinete = null;
-    }
+	{
+		this.gabinete = null;
+	}
 
-    public void abrirGabinete()
-    {
-        gabinete.abrir();
-    }
+	public void abrirGabinete()
+	{
+		gabinete.abrir();
+	}
 
-    public void fecharGabinete()
-    {
-        gabinete.fechar();
-    }
+	public void fecharGabinete()
+	{
+		gabinete.fechar();
+	}
 
-    public void adicionar(Horario horario)
-    {
-        if(horarios.contains(horario))
-            return;
-        horarios.add(horario);
-    }
+	public void adicionar(Horario horario)
+	{
+		if(horarios.contains(horario))
+			return;
+		horarios.add(horario);
+	}
 
-    public void remover(Horario horario)
-    {
-        if(!horarios.contains(horario))
-            return;
-        horarios.remove(horario);
-    }
+	public void remover(Horario horario)
+	{
+		if(!horarios.contains(horario))
+			return;
+		horarios.remove(horario);
+	}
 
-    public LinkedList<Horario> getHorarios()
-    {
-        return new LinkedList<>(horarios);
-    }
+	public LinkedList<Horario> getHorarios()
+	{
+		return new LinkedList<>(horarios);
+	}
 
 	public GabineteProfessor getGabinete()
 	{
@@ -96,14 +96,14 @@ public class Professor extends PessoaComAulas implements Funcionario {
 	}
 
 	public void abrir(Sala sala)
-    {
-        sala.abrir();
-    }
+	{
+		sala.abrir();
+	}
 
-    public void fechar(Sala sala)
-    {
-        sala.fechar();
-    }
+	public void fechar(Sala sala)
+	{
+		sala.fechar();
+	}
 
 	private GabineteProfessor gabinete;
 	private LinkedList<Horario> horarios;
